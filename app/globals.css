@@ -6,6 +6,7 @@
 
 body {
   font-family: "Public Sans", sans-serif;
+  background-color: #f8f8ff;
 }
 
 @layer utilities {

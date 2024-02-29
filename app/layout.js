@@ -1,7 +1,10 @@
-import { Public_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const font = Public_Sans({ subsets: ["latin"] });
+const font = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["variable"],
+});
 
 export const metadata = {
   title: "Create Next App",
