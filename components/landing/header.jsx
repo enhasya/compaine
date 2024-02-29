@@ -85,7 +85,7 @@ const Header = () => {
             icon={icons.CuttingEdgeTechnology}
             iconState={expandSection.CuttingEdgeTechnology}
             expandExp={expandSection.CuttingEdgeTechnology}
-            exp="Expect visually stunning websites that not only capture attention but also deliver an exceptional user experience, fostering customer loyalty."
+            exp="From responsive design to seamless navigation, we leverage cutting-edge tools to keep your website at the forefront of innovation."
           />
           <Section
             onClick={() => handleExpandSection("ReliabilityAndSupport")}
@@ -94,7 +94,7 @@ const Header = () => {
             icon={icons.ReliabilityAndSupport}
             iconState={expandSection.ReliabilityAndSupport}
             expandExp={expandSection.ReliabilityAndSupport}
-            exp="Expect visually stunning websites that not only capture attention but also deliver an exceptional user experience, fostering customer loyalty."
+            exp="Offering reliable ongoing support, ensuring your website secure, and up-to-date with the evolving digital landscape."
           />
         </div>
       </div>
