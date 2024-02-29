@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center w-full h-auto lg:h-screen p-8 lg:p-32">
+    <main className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center w-full h-auto lg:h-screen px-8 pt-0 pb-8 lg:p-32">
       <div className="flex flex-col w-full lg:w-[40%] h-auto items-start justify-start">
         <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-0">
           Get 10% Off The First Purchase!
