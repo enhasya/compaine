@@ -125,7 +125,7 @@ const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
         />
       </button>
       {expandExp && (
-        <p className="font-light text-sm tracking-tight text-start mt-2 lg:mt-4">
+        <p className="font-light text-sm tracking-tight text-start mt-4 lg:mt-8">
           {exp}
         </p>
       )}

@@ -135,12 +135,12 @@ const Section = ({
         />
       </button>
       {expandWrap && (
-        <div className="flex flex-col w-full h-auto justify-start items-start mt-2 lg:mt-4">
+        <div className="flex flex-col w-full h-auto justify-start items-start mt-4 lg:mt-8">
           <Image src={image} width="3840" height="2160" />
-          <p className="font-light text-sm tracking-tight text-start mt-2 lg:mt-4">
+          <p className="font-light text-sm tracking-tight text-start mt-4 lg:mt-8">
             {exp}
           </p>
-          <p className="font-medium text-sm tracking-tight text-start mt-2 lg:mt-4">
+          <p className="font-medium text-sm tracking-tight text-start mt-4 lg:mt-8">
             {shortcut}
           </p>
         </div>
