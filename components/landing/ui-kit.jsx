@@ -10,24 +10,20 @@ const illustrations = {
 };
 
 const icons = {
-  CreativeExcellence: require("@/shared/icons/vuesax/outline/award-blue.svg"),
-  CuttingEdgeTechnology: require("@/shared/icons/vuesax/outline/3dcube-blue.svg"),
-  ReliabilityAndSupport: require("@/shared/icons/vuesax/outline/24-support-blue.svg"),
+  UserTag: require("@/shared/icons/vuesax/outline/user-tag-blue.svg"),
   ArrowDown: require("@/shared/icons/vuesax/outline/arrow-down-blue.svg"),
 };
 
 const LandingUIKit = () => {
   const [expandSection, setExpandSection] = useState({
-    CreativeExcellence: true,
-    CuttingEdgeTechnology: false,
-    ReliabilityAndSupport: false,
+    exorcisindemon: false,
+    shrasya: false,
   });
 
   const handleExpandSection = (section) => {
     setExpandSection((prevState) => ({
-      CreativeExcellence: false,
-      CuttingEdgeTechnology: false,
-      ReliabilityAndSupport: false,
+      exorcisindemon: false,
+      shrasya: false,
       [section]: !prevState[section],
     }));
   };
@@ -71,12 +67,12 @@ const LandingUIKit = () => {
         </p>
         <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
           <Section
-            onClick={() => handleExpandSection("CreativeExcellence")}
+            onClick={() => handleExpandSection("exorcisindemon")}
             cn={"rounded-t-lg px-8 pt-8 pb-4"}
             title="exorcisindemon's Portfolio"
-            icon={icons.CreativeExcellence}
-            iconState={expandSection.CreativeExcellence}
-            expandWrap={expandSection.CreativeExcellence}
+            icon={icons.UserTag}
+            iconState={expandSection.exorcisindemon}
+            expandWrap={expandSection.exorcisindemon}
             image={illustrations.exorcisindemon}
             exp={
               "Take a moment to explore the intricacies of this creation – every pixel meticulously placed, every interaction thoughtfully designed. From seamless navigation to captivating visuals, every element bears the hallmark of my expertise and passion for pushing the boundaries of digital craftsmanship."
@@ -84,12 +80,12 @@ const LandingUIKit = () => {
             shortcut="https://exorcisindemon.vercel.app"
           />
           <Section
-            onClick={() => handleExpandSection("ReliabilityAndSupport")}
+            onClick={() => handleExpandSection("shrasya")}
             cn={"rounded-b-lg px-8 pt-4 pb-8"}
             title="shrasya's Portfolio"
-            icon={icons.ReliabilityAndSupport}
-            iconState={expandSection.ReliabilityAndSupport}
-            expandWrap={expandSection.ReliabilityAndSupport}
+            icon={icons.UserTag}
+            iconState={expandSection.shrasya}
+            expandWrap={expandSection.shrasya}
             image={illustrations.shrasya}
             exp={
               "Delve into the digital realm I've meticulously crafted for you – a website where innovation and aesthetics converge seamlessly. With a passion for cutting-edge technology, I've woven the magic of JSX, React.js Maven, Next.js Virtuoso, and the enchanting iOS App Enchantress into every pixel and line of code."
