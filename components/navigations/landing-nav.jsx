@@ -6,7 +6,7 @@ const logo = {
   Compaine: require("@/shared/assets/compaine.svg"),
 };
 const icon = {
-  Announcement: require("@/shared/icons/vuesax/outline/magic-star-white.svg"),
+  Announcement: require("@/shared/icons/vuesax/outline/magic-star-black.svg"),
   Expand: require("@/shared/icons/vuesax/outline/more-blue.svg"),
 };
 
@@ -68,7 +68,7 @@ const LandingNav = () => {
         )}
       </div>
       <div className="hidden lg:flex flex-col lg:flex-row gap-8 lg:gap-0 items-start lg:items-end justify-center w-full lg:w-[30%]">
-        <button className="bg-[#FF03FF] text-white transition-all animate-pulse flex flex-row gap-2 items-center rounded-full px-8 py-2">
+        <button className="bg-white text-black transition-all flex flex-row gap-2 items-center rounded-full px-8 py-2">
           <Image src={icon.Announcement} width="16" height="16" />
           <p className="font-medium text-sm tracking-tight text-start mt-0">
             Announcing Compaine

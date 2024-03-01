@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const illustrations = {
-  Diamond: require("@/shared/assets/diamond.svg"),
+  UIKit: require("@/shared/assets/example.png"),
 };
 
 const icons = {
@@ -14,7 +14,7 @@ const icons = {
   ArrowDown: require("@/shared/icons/vuesax/outline/arrow-down-blue.svg"),
 };
 
-const LandingHeader = () => {
+const LandingUIKit = () => {
   const [expandSection, setExpandSection] = useState({
     CreativeExcellence: true,
     CuttingEdgeTechnology: false,
@@ -31,7 +31,13 @@ const LandingHeader = () => {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center justify-center w-full h-auto px-8 pt-0 pb-8 lg:p-32">
+    <main className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start justify-center w-full h-auto px-8 pt-0 pb-8 lg:px-32 lg:pt-0 lg:pb-32">
+      <Image
+        className="flex w-full lg:w-[60%] h-full drop-shadow-2xl"
+        src={illustrations.UIKit}
+        width="5595"
+        height="4195"
+      />
       <div className="flex flex-col w-full lg:w-[40%] h-auto items-start justify-start">
         <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-0">
           Get 10% Off The First Purchase!
@@ -57,15 +63,39 @@ const LandingHeader = () => {
             </p>
           </button>
         </div>
-      </div>
-      <Image
-        className="flex w-full lg:w-[30%] h-full drop-shadow-2xl animate-pulse"
-        src={illustrations.Diamond}
-        width="730"
-        height="813"
-      />
-      <div className="flex flex-col w-full lg:w-[40%] h-auto items-start justify-start">
-        <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-0">
+        <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-8 lg:mt-16">
+          Why Choose Compaine?
+        </p>
+        <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
+          <Section
+            onClick={() => handleExpandSection("CreativeExcellence")}
+            cn={"rounded-t-lg px-8 pt-8 pb-4"}
+            title="Creative Excellence"
+            icon={icons.CreativeExcellence}
+            iconState={expandSection.CreativeExcellence}
+            expandExp={expandSection.CreativeExcellence}
+            exp="Expect visually stunning websites that not only capture attention but also deliver an exceptional user experience, fostering customer loyalty."
+          />
+          <Section
+            onClick={() => handleExpandSection("CuttingEdgeTechnology")}
+            cn={"rounded-none px-8 pt-4 pb-4"}
+            title="Cutting-Edge Technology"
+            icon={icons.CuttingEdgeTechnology}
+            iconState={expandSection.CuttingEdgeTechnology}
+            expandExp={expandSection.CuttingEdgeTechnology}
+            exp="From responsive design to seamless navigation, we leverage cutting-edge tools to keep your website at the forefront of innovation."
+          />
+          <Section
+            onClick={() => handleExpandSection("ReliabilityAndSupport")}
+            cn={"rounded-b-lg px-8 pt-4 pb-8"}
+            title="Reability and Support"
+            icon={icons.ReliabilityAndSupport}
+            iconState={expandSection.ReliabilityAndSupport}
+            expandExp={expandSection.ReliabilityAndSupport}
+            exp="Offering reliable ongoing support, ensuring your website secure, and up-to-date with the evolving digital landscape."
+          />
+        </div>
+        <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-8 lg:mt-16">
           Why Choose Compaine?
         </p>
         <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
@@ -102,7 +132,7 @@ const LandingHeader = () => {
   );
 };
 
-export default LandingHeader;
+export default LandingUIKit;
 
 const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
   return (

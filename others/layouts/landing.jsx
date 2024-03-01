@@ -1,16 +1,15 @@
 import React from "react";
 
-const { default: Header } = require("@/components/landing/header");
+const { default: LandingHeader } = require("@/components/landing/header");
 const { default: LandingNav } = require("@/components/navigations/landing-nav");
+const { default: LandingUIKit } = require("@/components/landing/ui-kit");
 
 const LandingLayout = () => {
   return (
     <React.Fragment>
       <LandingNav />
-      <Header />
-      <Header />
-      <Header />
-      <Header />
+      <LandingHeader />
+      <LandingUIKit />
     </React.Fragment>
   );
 };
