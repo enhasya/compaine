@@ -75,7 +75,7 @@ const LandingUIKit = () => {
             expandWrap={expandSection.exorcisindemon}
             image={illustrations.exorcisindemon}
             exp={
-              "Take a moment to explore the intricacies of this creation – every pixel meticulously placed, every interaction thoughtfully designed. From seamless navigation to captivating visuals, every element bears the hallmark of my expertise and passion for pushing the boundaries of digital craftsmanship."
+              "10/10! Amazing!"
             }
             shortcut="https://exorcisindemon.vercel.app"
           />
@@ -88,7 +88,7 @@ const LandingUIKit = () => {
             expandWrap={expandSection.shrasya}
             image={illustrations.shrasya}
             exp={
-              "Delve into the digital realm I've meticulously crafted for you – a website where innovation and aesthetics converge seamlessly. With a passion for cutting-edge technology, I've woven the magic of JSX, React.js Maven, Next.js Virtuoso, and the enchanting iOS App Enchantress into every pixel and line of code."
+              "I need a portfolio website! And ended up with this masterpiece."
             }
             shortcut="https://shrasya.vercel.app"
           />
@@ -133,8 +133,9 @@ const Section = ({
       {expandWrap && (
         <div className="flex flex-col w-full h-auto justify-start items-start mt-4 lg:mt-8">
           <Image src={image} width="3840" height="2160" />
-          <p className="font-light text-sm tracking-tight text-start mt-4 lg:mt-8">
-            {exp}
+          <p className="text-black font-bold text-lg lg:text-2xl tracking-tight text-start mt-4 lg:mt-8">
+            &rsquo;<span className="text-[#3000E6]"> {exp} </span>
+            &rsquo;
           </p>
           <p className="font-medium text-sm tracking-tight text-start mt-4 lg:mt-8">
             {shortcut}
