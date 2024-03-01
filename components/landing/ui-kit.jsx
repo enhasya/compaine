@@ -40,16 +40,17 @@ const LandingUIKit = () => {
       />
       <div className="flex flex-col w-full lg:w-[40%] h-auto items-start justify-start">
         <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-0">
-          Get 10% Off The First Purchase!
+          Ready to take your online presence to the next level?
         </p>
         <p className="font-medium text-2xl lg:text-4xl tracking-tight text-start mt-4 lg:mt-8">
-          <span className="text-[#FF03FF]">Compaine</span> - Create Your
-          Business Website Now
+          <span className="text-[#FF03FF]">Tailored</span> Solutions for Every
+          Business
         </p>
         <p className="font-light text-sm lg:text-lg tracking-tight text-start mt-4 lg:mt-8">
-          Your premier destination for all your company website needs. We pride
-          ourselves on our expertise in crafting stunning websites that not only
-          captivate your audience but also drive results.
+          Our team of skilled professionals works closely with you to understand
+          your brand identity, target audience, and business objectives. We then
+          tailor a customized website solution that perfectly aligns with your
+          vision and goals.
         </p>
         <div className="flex flex-row gap-2 lg:gap-4 items-center justify-start w-full lg:w-auto mt-4 lg:mt-8">
           <button className="bg-[#3000E6] transition-all hover:bg-[#3000E6]/90 rounded-lg px-4 py-2">
