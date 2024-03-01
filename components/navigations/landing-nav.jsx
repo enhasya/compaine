@@ -90,13 +90,13 @@ const LandingNav = () => {
             <p className="font-medium text-sm tracking-tight text-start mt-0">
               Contact
             </p>
-            <Image src={icon.ArrowUp} width="16" height="16" />
+            <Image className="flex lg:hidden" src={icon.ArrowUp} width="16" height="16" />
           </button>
           <button className="bg-transparent text-black transition-all hover:text-[#3000E6] lg:hover:text-black lg:hover:bg-white flex flex-row gap-2 items-center justify-between rounded-lg w-full lg:w-auto p-0 lg:px-4 lg:py-2">
             <p className="font-medium text-sm tracking-tight text-start mt-0">
               Support
             </p>
-            <Image src={icon.ArrowUp} width="16" height="16" />
+            <Image className="flex lg:hidden" src={icon.ArrowUp} width="16" height="16" />
           </button>
         </div>
       )}
