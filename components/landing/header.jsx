@@ -106,8 +106,11 @@ export default LandingHeader;
 
 const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
   return (
-    <button onClick={onClick} className={`${cn} bg-white flex flex-col w-full`}>
-      <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
+    <div className={`${cn} bg-white flex flex-col w-full`}>
+      <button
+        onClick={onClick}
+        className="flex flex-row gap-2 items-center justify-between w-full h-auto"
+      >
         <div className="flex flex-row gap-2 items-center justify-start w-auto h-auto">
           <Image src={icon} width="16" height="16" />
           <p className="text-[#3000E6] font-medium text-sm tracking-tight text-start mt-0">
@@ -120,12 +123,12 @@ const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
           width="16"
           height="16"
         />
-      </div>
+      </button>
       {expandExp && (
         <p className="font-light text-sm tracking-tight text-start mt-2 lg:mt-4">
           {exp}
         </p>
       )}
-    </button>
+    </div>
   );
 };

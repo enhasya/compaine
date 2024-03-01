@@ -5,6 +5,8 @@ import Image from "next/image";
 
 const illustrations = {
   UIKit: require("@/shared/assets/example.png"),
+  exorcisindemon: require("@/shared/assets/exorcisindemon.png"),
+  shrasya: require("@/shared/assets/shrasya.png"),
 };
 
 const icons = {
@@ -65,67 +67,34 @@ const LandingUIKit = () => {
           </button>
         </div>
         <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-8 lg:mt-16">
-          Why Choose Compaine?
+          Explore the Voices of Satisfaction
         </p>
         <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
           <Section
             onClick={() => handleExpandSection("CreativeExcellence")}
             cn={"rounded-t-lg px-8 pt-8 pb-4"}
-            title="Creative Excellence"
+            title="exorcisindemon's Portfolio"
             icon={icons.CreativeExcellence}
             iconState={expandSection.CreativeExcellence}
-            expandExp={expandSection.CreativeExcellence}
-            exp="Expect visually stunning websites that not only capture attention but also deliver an exceptional user experience, fostering customer loyalty."
-          />
-          <Section
-            onClick={() => handleExpandSection("CuttingEdgeTechnology")}
-            cn={"rounded-none px-8 pt-4 pb-4"}
-            title="Cutting-Edge Technology"
-            icon={icons.CuttingEdgeTechnology}
-            iconState={expandSection.CuttingEdgeTechnology}
-            expandExp={expandSection.CuttingEdgeTechnology}
-            exp="From responsive design to seamless navigation, we leverage cutting-edge tools to keep your website at the forefront of innovation."
+            expandWrap={expandSection.CreativeExcellence}
+            image={illustrations.exorcisindemon}
+            exp={
+              "Take a moment to explore the intricacies of this creation – every pixel meticulously placed, every interaction thoughtfully designed. From seamless navigation to captivating visuals, every element bears the hallmark of my expertise and passion for pushing the boundaries of digital craftsmanship."
+            }
+            shortcut="https://exorcisindemon.vercel.app"
           />
           <Section
             onClick={() => handleExpandSection("ReliabilityAndSupport")}
             cn={"rounded-b-lg px-8 pt-4 pb-8"}
-            title="Reability and Support"
+            title="shrasya's Portfolio"
             icon={icons.ReliabilityAndSupport}
             iconState={expandSection.ReliabilityAndSupport}
-            expandExp={expandSection.ReliabilityAndSupport}
-            exp="Offering reliable ongoing support, ensuring your website secure, and up-to-date with the evolving digital landscape."
-          />
-        </div>
-        <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-8 lg:mt-16">
-          Why Choose Compaine?
-        </p>
-        <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
-          <Section
-            onClick={() => handleExpandSection("CreativeExcellence")}
-            cn={"rounded-t-lg px-8 pt-8 pb-4"}
-            title="Creative Excellence"
-            icon={icons.CreativeExcellence}
-            iconState={expandSection.CreativeExcellence}
-            expandExp={expandSection.CreativeExcellence}
-            exp="Expect visually stunning websites that not only capture attention but also deliver an exceptional user experience, fostering customer loyalty."
-          />
-          <Section
-            onClick={() => handleExpandSection("CuttingEdgeTechnology")}
-            cn={"rounded-none px-8 pt-4 pb-4"}
-            title="Cutting-Edge Technology"
-            icon={icons.CuttingEdgeTechnology}
-            iconState={expandSection.CuttingEdgeTechnology}
-            expandExp={expandSection.CuttingEdgeTechnology}
-            exp="From responsive design to seamless navigation, we leverage cutting-edge tools to keep your website at the forefront of innovation."
-          />
-          <Section
-            onClick={() => handleExpandSection("ReliabilityAndSupport")}
-            cn={"rounded-b-lg px-8 pt-4 pb-8"}
-            title="Reability and Support"
-            icon={icons.ReliabilityAndSupport}
-            iconState={expandSection.ReliabilityAndSupport}
-            expandExp={expandSection.ReliabilityAndSupport}
-            exp="Offering reliable ongoing support, ensuring your website secure, and up-to-date with the evolving digital landscape."
+            expandWrap={expandSection.ReliabilityAndSupport}
+            image={illustrations.shrasya}
+            exp={
+              "Delve into the digital realm I've meticulously crafted for you – a website where innovation and aesthetics converge seamlessly. With a passion for cutting-edge technology, I've woven the magic of JSX, React.js Maven, Next.js Virtuoso, and the enchanting iOS App Enchantress into every pixel and line of code."
+            }
+            shortcut="https://shrasya.vercel.app"
           />
         </div>
       </div>
@@ -135,10 +104,23 @@ const LandingUIKit = () => {
 
 export default LandingUIKit;
 
-const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
+const Section = ({
+  onClick,
+  cn,
+  title,
+  icon,
+  iconState,
+  expandWrap,
+  image,
+  exp,
+  shortcut,
+}) => {
   return (
-    <button onClick={onClick} className={`${cn} bg-white flex flex-col w-full`}>
-      <div className="flex flex-row gap-2 items-center justify-between w-full h-auto">
+    <div className={`${cn} bg-white flex flex-col w-full`}>
+      <button
+        onClick={onClick}
+        className="flex flex-row gap-2 items-center justify-between w-full h-auto"
+      >
         <div className="flex flex-row gap-2 items-center justify-start w-auto h-auto">
           <Image src={icon} width="16" height="16" />
           <p className="text-[#3000E6] font-medium text-sm tracking-tight text-start mt-0">
@@ -151,12 +133,18 @@ const Section = ({ onClick, cn, title, icon, iconState, expandExp, exp }) => {
           width="16"
           height="16"
         />
-      </div>
-      {expandExp && (
-        <p className="font-light text-sm tracking-tight text-start mt-2 lg:mt-4">
-          {exp}
-        </p>
+      </button>
+      {expandWrap && (
+        <div className="flex flex-col w-full h-auto justify-start items-start mt-2 lg:mt-4">
+          <Image src={image} width="3840" height="2160" />
+          <p className="font-light text-sm tracking-tight text-start mt-2 lg:mt-4">
+            {exp}
+          </p>
+          <p className="font-medium text-sm tracking-tight text-start mt-2 lg:mt-4">
+            {shortcut}
+          </p>
+        </div>
       )}
-    </button>
+    </div>
   );
 };
