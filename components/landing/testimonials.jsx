@@ -14,7 +14,7 @@ const icons = {
   ArrowDown: require("@/shared/icons/vuesax/outline/arrow-down-blue.svg"),
 };
 
-const LandingUIKit = () => {
+const LandingTestimonials = () => {
   const [expandSection, setExpandSection] = useState({
     exorcisindemon: false,
     shrasya: false,
@@ -29,9 +29,9 @@ const LandingUIKit = () => {
   };
 
   return (
-    <main className="bg-white flex flex-col gap-8 lg:gap-16 items-center lg:items-center justify-center w-full h-auto px-8 py-8 lg:px-32 lg:py-32">
+    <main className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-start justify-center w-full h-auto px-8 py-8 lg:px-32 lg:py-32">
       <Image
-        className="flex w-full lg:w-[40%] h-full drop-shadow-2xl"
+        className="flex w-full lg:w-[60%] h-full drop-shadow-2xl"
         src={illustrations.UIKit}
         width="5595"
         height="4195"
@@ -65,7 +65,7 @@ const LandingUIKit = () => {
         <p className="text-[#3000E6] font-bold text-sm lg:text-lg tracking-tight text-start uppercase mt-8 lg:mt-16">
           Explore the Voices of Satisfaction
         </p>
-        <div className="bg-white flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
+        <div className="flex flex-col w-full h-auto gap-0 mt-4 lg:mt-8">
           <Section
             onClick={() => handleExpandSection("exorcisindemon")}
             cn={"rounded-t-lg px-8 pt-8 pb-4"}
@@ -74,7 +74,9 @@ const LandingUIKit = () => {
             iconState={expandSection.exorcisindemon}
             expandWrap={expandSection.exorcisindemon}
             image={illustrations.exorcisindemon}
-            exp={"10/10! Amazing!"}
+            exp={
+              "10/10! Amazing!"
+            }
             shortcut="https://exorcisindemon.vercel.app"
           />
           <Section
@@ -96,7 +98,7 @@ const LandingUIKit = () => {
   );
 };
 
-export default LandingUIKit;
+export default LandingTestimonials;
 
 const Section = ({
   onClick,
@@ -110,7 +112,7 @@ const Section = ({
   shortcut,
 }) => {
   return (
-    <div className={`${cn} bg-[#F8F8FF] flex flex-col w-full`}>
+    <div className={`${cn} bg-white flex flex-col w-full`}>
       <button
         onClick={onClick}
         className="flex flex-row gap-2 items-center justify-between w-full h-auto"
